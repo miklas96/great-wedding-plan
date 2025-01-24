@@ -1,0 +1,52 @@
+<header class="bg-gray-800 text-white shadow-md">
+  <div class="container mx-auto flex justify-evenly p-4">
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-4">
+      <a
+        href="#"
+        class="text-gray-300 hover:text-white transition duration-200"
+        *ngFor="let item of navigation"
+        [routerLink]="item.url"
+        routerLinkActive="active"
+      >
+        {{ item.label }}
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="md:hidden text-gray-300 hover:text-white focus:outline-none"
+      (click)="toggleMobileMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="md:hidden bg-gray-700" *ngIf="isMobileMenuOpen">
+    <nav class="flex flex-col space-y-2 p-4">
+      <a
+        href="#"
+        class="text-gray-300 hover:text-white transition duration-200"
+        *ngFor="let item of navigation"
+        [routerLink]="item.url"
+        routerLinkActive="active"
+      >
+        {{ item.label }}
+      </a>
+    </nav>
+  </div>
+</header>
