@@ -1,0 +1,43 @@
+.invitation-container {
+  font-family: "Arial", sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #e4e7a1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .contact-form-button {
+    background-color: #c59800;
+    a {
+      color: white;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+a {
+  color: #a3575d;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+strong {
+  color: #c59800;
+}

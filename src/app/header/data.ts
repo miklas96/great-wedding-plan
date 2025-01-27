@@ -2,6 +2,11 @@ import { Navigation } from "../types";
 
 export const navigationItems: Navigation[] = [
     {
+        label: 'Strona Główna',
+        url: '',
+        icon: 'home'
+    },
+    {
         label: 'Kiedy',
         url: '/when'
     },

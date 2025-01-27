@@ -1,1 +1,40 @@
-<p>contact works!</p>
+<div class="contact-form-container">
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Imię i nazwisko</mat-label>
+      <input matInput formControlName="fullName" />
+      <mat-error *ngIf="fullName?.hasError('required')">
+        Imię i nazwisko jest wymaganee.
+      </mat-error>
+      <mat-error *ngIf="fullName?.hasError('minlength')">
+        Imię i nazwisko musi mieć przynajmniej 3 znaki.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Opis</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Wybierz opcję</mat-label>
+      <mat-select formControlName="selectedOption">
+        <mat-option *ngFor="let option of options" [value]="option.name">
+          {{ option.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="selectedOption?.hasError('required')">
+        Wybór opcji jest wymagany.
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      type="submit"
+      class="send"
+      [disabled]="contactForm.invalid"
+    >
+      Wyślijjj
+    </button>
+  </form>
+</div>
