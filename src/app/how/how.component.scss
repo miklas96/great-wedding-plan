@@ -1,8 +1,48 @@
-.center {
-  padding: 70px 0;
-  text-align: center;
+.wedding-container {
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .options-list {
+    list-style-type: decimal;
+    margin: 0;
+    padding: 0 1rem;
+
+    .option {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+  }
 }
 
 h1 {
-  font-size: xx-large;
+  text-align: center;
+  font-size: 30px;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+a {
+  color: #a3575d;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+strong {
+  color: #c59800;
 }

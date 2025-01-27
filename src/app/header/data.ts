@@ -7,23 +7,28 @@ export const navigationItems: Navigation[] = [
         icon: 'home'
     },
     {
-        label: 'Kiedy',
-        url: '/when'
+        label: 'Kiedy?',
+        url: '/when',
+        icon: 'access_time'
     },
     {
-        label: 'Gdzie',
-        url: '/where'
+        label: 'Gdzie?',
+        url: '/where',
+        icon: 'place'
     },
     {
-        label: 'Jak',
-        url: '/how'
+        label: 'Jak?',
+        url: '/how',
+        icon: 'airplanemode_active'
     },
     {
         label: 'Dodatkowe info',
-        url: '/additional'
+        url: '/additional',
+        icon: 'control_point'
     },
     {
         label: 'Kontakt',
-        url: '/contact'
+        url: '/contact',
+        icon: ' contact_mail'
     }
 ];

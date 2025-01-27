@@ -1,12 +1,35 @@
 @use "@angular/material" as mat;
 @import "tailwind-import.css";
 
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  @include mat.snack-bar-overrides(
+    (
+      container-color: #c59800,
+    )
+  );
+}
 html,
 body {
   height: 100%;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-image: url("./assets/cytryn.jpg");
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0);
   background-blend-mode: lighten;
+
+  .wedding-container {
+    font-family: "Arial", sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e4e7a1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Wyśrodkowanie */
+    padding: 0 1rem; /* Małe odstępy po bokach dla responsywności */
+  }
 }

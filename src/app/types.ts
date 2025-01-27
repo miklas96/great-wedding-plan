@@ -12,3 +12,7 @@ export type WeddingLocation = {
     sleepMode: boolean;
     extendedDescription?: string;
 }
+
+export type Food = {
+    name: string;
+}

@@ -8,10 +8,13 @@
     background-color: #c59800;
     background-image: url("./../../assets/cytryn.jpg");
     background-blend-mode: color-burn;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 16px;
     height: 64px;
+    @media (max-width: 767px) {
+      justify-content: space-between;
+    }
 
     .desktop-nav {
       display: none;

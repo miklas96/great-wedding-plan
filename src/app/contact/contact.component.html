@@ -1,4 +1,4 @@
-<div class="contact-form-container">
+<div class="wedding-container">
   <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
     <mat-form-field appearance="fill" class="full-width">
       <mat-label>Imię i nazwisko</mat-label>
@@ -28,8 +28,26 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Napisz jaka konfiguracja pokoju i ile nocy</mat-label>
-      <textarea matInput formControlName="description"></textarea>
+      <mat-label>Wybierz danie na wspólny obiad</mat-label>
+      <mat-select formControlName="selectedOptionFood" panelClass="dropdown">
+        <ng-container *ngFor="let option of foodOptions">
+          <mat-option [value]="option.name">
+            {{ option.name }}
+          </mat-option>
+        </ng-container>
+      </mat-select>
+      <mat-error *ngIf="selectedOptionFood?.hasError('required')">
+        Wybór opcji jest wymagany.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Szczegóły</mat-label>
+      <textarea
+        matInput
+        placeholder="Daj nam znać czy zaszczycisz nas swoją obecnością 😊"
+        formControlName="description"
+      ></textarea>
     </mat-form-field>
 
     <button

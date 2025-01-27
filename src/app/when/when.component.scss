@@ -1,8 +1,80 @@
-.center {
-  padding: 70px 0;
-  text-align: center;
+.wedding-container {
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Wyśrodkowanie poziome */
+  text-align: center; /* Wyśrodkowanie tekstu */
+
+  .schedule-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  .schedule-day {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie poziome */
+
+    .day-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .schedule-events {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Wyśrodkowanie elementów */
+
+      .event {
+        display: flex;
+        justify-content: center; /* Wyśrodkowanie tekstu w wierszu */
+        align-items: baseline;
+        margin-bottom: 0.5rem;
+
+        .time {
+          font-weight: bold;
+          margin-right: 1rem;
+          color: #555;
+          min-width: 100px; /* Stała szerokość dla estetyki */
+          text-align: right; /* Wyrównanie czasu do prawej */
+        }
+      }
+    }
+  }
 }
 
 h1 {
-  font-size: xx-large;
+  text-align: center;
+  font-size: 30px;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+a {
+  color: #a3575d;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+strong {
+  color: #c59800;
 }
