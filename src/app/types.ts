@@ -9,4 +9,6 @@ export type WeddingLocation = {
     isVisible: boolean;
     name?: string;
     description?: string
+    sleepMode: boolean;
+    extendedDescription?: string;
 }

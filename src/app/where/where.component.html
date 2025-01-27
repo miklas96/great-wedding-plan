@@ -11,13 +11,14 @@
         <mat-panel-title>
           <h2 [innerHTML]="location.name"></h2>
         </mat-panel-title>
-        <mat-panel-description *ngIf="location?.description">
-          <p [innerHTML]="location?.description"></p>
-        </mat-panel-description>
       </mat-expansion-panel-header>
 
       <!-- Iframe -->
-      <div class="overflow-hidden">
+      <div class="overflow-hidden content-wrapper">
+        <p
+          class="extended-description"
+          [innerHTML]="location.extendedDescription"
+        ></p>
         <iframe
           class="w-full transition-opacity duration-500 ease-in-out"
           [src]="getSafeUrl(location.iframeSrc)"
@@ -30,4 +31,6 @@
       </div>
     </mat-expansion-panel>
   </mat-accordion>
+  <br />
+  <img src="../../assets/map.jpg" class="image-map" alt="image" />
 </div>

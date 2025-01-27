@@ -32,3 +32,11 @@ button {
   background-color: #fff9a0;
   color: white;
 }
+
+::ng-deep mat-label {
+  color: white !important;
+}
+
+::ng-deep .dropdown.mat-mdc-select-panel {
+  background-color: #a57a05;
+}

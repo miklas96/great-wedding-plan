@@ -12,20 +12,24 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Opis</mat-label>
-      <textarea matInput formControlName="description"></textarea>
-    </mat-form-field>
-
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Wybierz opcję</mat-label>
-      <mat-select formControlName="selectedOption">
-        <mat-option *ngFor="let option of options" [value]="option.name">
-          {{ option.name }}
-        </mat-option>
+      <mat-label>Wybierz nocleg</mat-label>
+      <mat-select formControlName="selectedOption" panelClass="dropdown">
+        <ng-container *ngFor="let option of options">
+          @if (option.sleepMode) {
+          <mat-option [value]="option.name">
+            {{ option.name }}
+          </mat-option>
+          }
+        </ng-container>
       </mat-select>
       <mat-error *ngIf="selectedOption?.hasError('required')">
         Wybór opcji jest wymagany.
       </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Napisz jaka konfiguracja pokoju i ile nocy</mat-label>
+      <textarea matInput formControlName="description"></textarea>
     </mat-form-field>
 
     <button
@@ -34,7 +38,7 @@
       class="send"
       [disabled]="contactForm.invalid"
     >
-      Wyślijjj
+      Wyślij
     </button>
   </form>
 </div>

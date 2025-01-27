@@ -1,8 +1,21 @@
-mat-expansion-panel {
-  background-color: #e4e7a1;
+mat-expansion-panel,
+mat-expansion-panel-header {
+  background-color: #e4e7a1 !important;
+}
+
+::ng-deep svg {
+  fill: black !important;
 }
 
 mat-panel-description,
 mat-panel-title {
   color: #c59800;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  .extended-description {
+    color: black;
+  }
 }
