@@ -1,8 +1,10 @@
-<div class="wedding-container">
+<div class="contact">
+<mat-spinner *ngIf="sent$ | async"></mat-spinner>
+<div class="wedding-container" [ngClass]="{'wedding-container--disabled': (sent$ | async)}">
   <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
     <mat-form-field appearance="fill" class="full-width">
       <mat-label>Imię i nazwisko</mat-label>
-      <input matInput formControlName="fullName" />
+      <input matInput formControlName="fullName"/>
       <mat-error *ngIf="fullName?.hasError('required')">
         Imię i nazwisko jest wymaganee.
       </mat-error>
@@ -27,21 +29,28 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Wybierz danie na wspólny obiad</mat-label>
-      <mat-select formControlName="selectedOptionFood" panelClass="dropdown">
-        <ng-container *ngFor="let option of foodOptions">
-          <mat-option [value]="option.name">
-            {{ option.name }}
-          </mat-option>
-        </ng-container>
-      </mat-select>
-      <mat-error *ngIf="selectedOptionFood?.hasError('required')">
-        Wybór opcji jest wymagany.
-      </mat-error>
-    </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Liczba osób w formularzu</mat-label>
+          <input matInput type="number" formControlName="numberOfPeople" [min]="1"/>
+          <mat-error *ngIf="numberOfPeople?.hasError('required')">
+              Podaj liczbę osób.
+          </mat-error>
+      </mat-form-field>
+      <div *ngFor="let control of selectedOptionFoodArray?.controls; let i = index">
+          <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Wybierz danie na wspólny obiad dla osoby {{ i + 1 }}</mat-label>
+              <mat-select [formControl]="control" panelClass="dropdown">
+                  <ng-container *ngFor="let option of foodOptions">
+                      <mat-option [value]="option.name">{{ option.name }}</mat-option>
+                  </ng-container>
+              </mat-select>
+              <mat-error *ngIf="control.hasError('required')">
+                  Wybór opcji jest wymagany.
+              </mat-error>
+          </mat-form-field>
+      </div>
 
-    <mat-form-field appearance="fill" class="full-width">
+      <mat-form-field appearance="fill" class="full-width">
       <mat-label>Szczegóły</mat-label>
       <textarea
         matInput
@@ -54,9 +63,10 @@
       mat-raised-button
       type="submit"
       class="send"
-      [disabled]="contactForm.invalid"
+      [disabled]="(contactForm.invalid || (sent$ | async))"
     >
       Wyślij
     </button>
   </form>
+</div>
 </div>

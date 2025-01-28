@@ -8,6 +8,10 @@
       container-color: #c59800,
     )
   );
+
+  @include mat.progress-spinner-overrides((
+          active-indicator-color: #c59800,
+  ));
 }
 html,
 body {
@@ -31,5 +35,9 @@ body {
     max-width: 1200px;
     margin: 0 auto; /* Wyśrodkowanie */
     padding: 0 1rem; /* Małe odstępy po bokach dla responsywności */
+  }
+
+  input {
+    color: white;
   }
 }
