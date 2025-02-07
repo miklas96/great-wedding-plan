@@ -20,8 +20,6 @@ export class WhereComponent {
   constructor(private sanitizer: DomSanitizer) {}
   
   weddingLocations: WeddingLocation[] = locations;
-  isIframeVisible = false; // Zmienna kontrolująca widoczność iframe
-  rotateClass = 'rotate-90';
 
   // To handle open event
   onPanelOpened(index: number): void {
@@ -32,7 +30,6 @@ export class WhereComponent {
   onPanelClosed(index: number): void {
     this.weddingLocations[index].isVisible = false;
   }
-
 
   getSafeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);

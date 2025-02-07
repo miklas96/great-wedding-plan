@@ -1,12 +1,4 @@
 .wedding-container {
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-
   .options-list {
     list-style-type: decimal;
     margin: 0;
@@ -15,6 +7,11 @@
     .option {
       margin-bottom: 1rem;
       font-size: 1rem;
+
+      .transport-international {
+        list-style-type: disc;
+        margin-left: 10px;
+      }
     }
   }
 }

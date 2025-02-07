@@ -1,6 +1,7 @@
 <div class="contact">
 <mat-spinner *ngIf="sent$ | async"></mat-spinner>
 <div class="wedding-container" [ngClass]="{'wedding-container--disabled': (sent$ | async)}">
+    <h2 class="title">Daj znać!</h2>
   <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
     <mat-form-field appearance="fill" class="full-width">
       <mat-label>Imię i nazwisko</mat-label>

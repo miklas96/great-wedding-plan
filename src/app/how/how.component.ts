@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-how',
@@ -9,4 +10,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class HowComponent {
 
+  constructor(private sanitizer: DomSanitizer) {
+  }
+
+  getSafeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }

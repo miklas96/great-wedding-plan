@@ -1,8 +1,12 @@
-.center {
-  padding: 70px 0;
-  text-align: center;
-}
+.wedding-container {
+  .additional-info {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0 1rem;
 
-h1 {
-  font-size: xx-large;
+    .single-info {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+  }
 }

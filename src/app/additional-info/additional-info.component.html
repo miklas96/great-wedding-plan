@@ -1,3 +1,8 @@
-<div class="center">
-  <h1>In progress</h1>
+<div class="wedding-container">
+    <h2 class="title">Coś więcej?</h2>
+  <ul class="additional-info">
+      <li *ngFor="let info of additionalInfo" class="single-info">
+          {{info.message}}
+      </li>
+  </ul>
 </div>

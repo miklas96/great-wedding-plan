@@ -16,3 +16,7 @@ export type WeddingLocation = {
 export type Food = {
     name: string;
 }
+
+export type AddInfoMessages = {
+    message: string;
+}
