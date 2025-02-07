@@ -6,7 +6,7 @@ export const locations: WeddingLocation[] = [
         name: 'Castelmola',
         isVisible: false,
         description: 'Ceremonia',
-        extendedDescription: 'Tutaj odbędzie sie ceremonia ślubna',
+        extendedDescription: 'Tutaj odbędzie się ceremonia ślubna',
         sleepMode: false
     },
     {
