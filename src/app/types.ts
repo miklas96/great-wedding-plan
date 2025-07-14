@@ -17,6 +17,17 @@ export type Food = {
     name: string;
 }
 
-export type AddInfoMessages = {
+export type AddInfo = {
+    place: string;
+    info: AddInfoMessages[];
+}
+
+type AddInfoMessages = {
     message: string;
+    details?: AddInfoDetails[];
+}
+
+type AddInfoDetails = {
+    message: string;
+    url: string;
 }

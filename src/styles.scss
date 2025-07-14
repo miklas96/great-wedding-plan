@@ -9,9 +9,11 @@
     )
   );
 
-  @include mat.progress-spinner-overrides((
-          active-indicator-color: #c59800,
-  ));
+  @include mat.progress-spinner-overrides(
+    (
+      active-indicator-color: #c59800,
+    )
+  );
 }
 html,
 body {
@@ -46,5 +48,10 @@ body {
 
   input {
     color: white;
+  }
+
+  a {
+    color: #a3575d;
+    text-decoration: none;
   }
 }

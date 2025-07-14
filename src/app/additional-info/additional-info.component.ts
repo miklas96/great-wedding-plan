@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {AddInfoMessages} from "../types";
-import {addInfo} from "./data";
-import {CommonModule} from "@angular/common";
-import {MatButtonModule} from "@angular/material/button";
+import { AddInfo } from "../types";
+import { addInfo } from "./data";
+import { CommonModule } from "@angular/common";
+import { MatButtonModule } from "@angular/material/button";
 
 @Component({
   selector: 'app-additional-info',
@@ -13,6 +13,6 @@ import {MatButtonModule} from "@angular/material/button";
 })
 export class AdditionalInfoComponent {
 
-  additionalInfo: AddInfoMessages[] = addInfo;
+  additionalInfo: AddInfo[] = addInfo;
 
 }

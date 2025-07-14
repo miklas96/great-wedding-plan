@@ -1,3 +1,4 @@
+import { PhotosComponent } from './photos/photos.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdditionalInfoComponent } from './additional-info/additional-info.component';
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'contact',
         component: ContactComponent
+    },
+    {
+        path: 'photos',
+        component: PhotosComponent
     },
 ];

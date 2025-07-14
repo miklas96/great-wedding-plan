@@ -1,8 +1,26 @@
 <div class="wedding-container">
-    <h2 class="title">Coś więcej?</h2>
-  <ul class="additional-info">
-      <li *ngFor="let info of additionalInfo" class="single-info">
-          {{info.message}}
+  <h2 class="title">Coś więcej?</h2>
+  <h3>
+    W sobote dla chętnych organizujemy wspólny obiad! W zakładce kontakt możecie
+    wybrać danie, które będziecie chcieli zjeść!
+  </h3>
+  <div class="list-wrapper">
+    @for (location of additionalInfo; track $index) {
+    <ul class="additional-info">
+      <h3 class="list-place">{{ location.place }}</h3>
+      @for (info of location.info; track $index) {
+      <h4 class="list-title">{{ info.message }}</h4>
+
+      @for (detail of info?.details; track $index) {
+      <li class="single-info">
+        <a
+          [href]="detail?.url"
+          target="_blank"
+          [innerHTML]="detail?.message"
+        ></a>
       </li>
-  </ul>
+      } }
+    </ul>
+    }
+  </div>
 </div>

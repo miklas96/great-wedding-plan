@@ -1,4 +1,4 @@
-import {Food, WeddingLocation} from "../types";
+import { Food, WeddingLocation } from "../types";
 
 export const locations: WeddingLocation[] = [
     {
@@ -15,7 +15,7 @@ export const locations: WeddingLocation[] = [
         isVisible: false,
         description: "Przyjęcie + Nocleg",
         sleepMode: true,
-        extendedDescription: 'Dostępne są 4 pokoje, w których w zależności od wykorzystania są następujące ceny: -100€/noc/2os, -90€/noc/1os, -130€/noc/3os, -160€/noc/4os, -180€/noc/5os minimalna ilość nocy 2 śniadania w cenie'
+        extendedDescription: 'Miejsce uroczystości. <strong>Brak wolnych pokojów</strong>, w których w zależności od wykorzystania są następujące ceny: -100€/noc/2os, -90€/noc/1os, -130€/noc/3os, -160€/noc/4os, -180€/noc/5os minimalna ilość nocy 2 śniadania w cenie'
     },
     {
         iframeSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4619.662379988302!2d15.208618834164197!3d37.7198693193178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313f9b4451856b9%3A0x4816a8850e23e613!2sAgriturismo%20Lumia!5e0!3m2!1sen!2spl!4v1737734844757!5m2!1sen!2spl',
@@ -23,7 +23,7 @@ export const locations: WeddingLocation[] = [
         isVisible: false,
         description: 'Nocleg 2',
         sleepMode: true,
-        extendedDescription: 'Dostępne jest 8 pokojów, w których w zależności od ilości osób obowiązują następujące ceny: -50€/1os/noc -70€/2os/noc -90€/3os/noc -110€/4os/noc -130€/5os/noc. Minimalna ilość nocy 2 śniadania w cenie'
+        extendedDescription: '<strong>Brak wolnych pokojów</strong>, w których w zależności od ilości osób obowiązują następujące ceny: -50€/1os/noc -70€/2os/noc -90€/3os/noc -110€/4os/noc -130€/5os/noc. Minimalna ilość nocy 2 śniadania w cenie. <strong>Pensjonariusze MOGĄ korzystać z basenu w 1. Agriturismo Lumia Resort</strong>'
     },
     {
         iframeSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.1675684127467!2d15.203106876302087!3d37.715744415557445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131405f1a9109687%3A0x24d01561d584c860!2sAgriturismo%20Galea!5e0!3m2!1sen!2spl!4v1737985897095!5m2!1sen!2spl',

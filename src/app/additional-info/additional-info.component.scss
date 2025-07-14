@@ -1,12 +1,33 @@
 .wedding-container {
-  .additional-info {
-    list-style-type: disc;
-    margin: 0;
-    padding: 0 1rem;
+  .list-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 
-    .single-info {
-      margin-bottom: 1rem;
-      font-size: 1rem;
+    .additional-info {
+      list-style-type: disc;
+      margin: 1rem 0;
+      padding: 0 1rem;
+      font-size: 20px;
+
+      .list-place {
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .list-title {
+        font-size: 15px;
+        text-decoration: underline;
+        font-style: italic;
+      }
+
+      .single-info {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
     }
   }
 }

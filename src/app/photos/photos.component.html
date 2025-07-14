@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Dodaj zdjęcie do albumu</h2>
+
+  <p>Użyj linku lub zeskanuj kod QR, aby dodać zdjęcie:</p>
+
+  <a [href]="qrData" target="_blank">Link</a>
+
+  <div class="qr-container">
+    <qrcode
+      [qrdata]="qrData"
+      [width]="400"
+      [errorCorrectionLevel]="'M'"
+      [colorLight]="'#00000000'"
+    ></qrcode>
+  </div>
+</div>

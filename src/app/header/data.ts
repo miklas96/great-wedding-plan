@@ -29,6 +29,11 @@ export const navigationItems: Navigation[] = [
     {
         label: 'Kontakt',
         url: '/contact',
-        icon: ' contact_mail'
+        icon: 'contact_mail'
+    },
+    {
+        label: 'Zdjęcia',
+        url: '/photos',
+        icon: 'photo_camera'
     }
 ];
