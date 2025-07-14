@@ -1,5 +1,5 @@
 <div class="wedding-container">
-    <h2 class="title">Kochani</h2>
+  <h2 class="title">Kochani</h2>
   <p>
     Z wielką radością chcielibyśmy zaprosić Was na nasz ślub, który odbędzie się
     5 września na Sycylii! Wasza obecność w tym wyjątkowym dniu będzie dla nas
@@ -12,6 +12,27 @@
 
   <h2>Szczegóły:</h2>
   <ol>
+    <li>
+      Dojazd na ceremonie będzie możliwy autokarem, który wyruszy spod
+      Agriturismo Lumia Resort. Więcej info tutaj
+      <button
+        mat-button
+        class="contact-form-button"
+        [routerLink]="'how'"
+        routerLinkActive="active"
+      >
+        <a>Transport</a>
+      </button>
+      i tutaj
+      <button
+        mat-button
+        class="contact-form-button"
+        [routerLink]="'when'"
+        routerLinkActive="active"
+      >
+        <a>Kiedy</a>
+      </button>
+    </li>
     <li>
       Ślub cywilny odbędzie się w Castelmola 5.09 o godzinie 16
       <a
