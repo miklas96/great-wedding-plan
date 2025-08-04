@@ -12,6 +12,12 @@
         list-style-type: disc;
         margin-left: 10px;
       }
+
+      .contact-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
     }
   }
 }
