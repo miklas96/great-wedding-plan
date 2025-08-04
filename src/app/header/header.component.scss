@@ -13,7 +13,8 @@
     padding: 0 16px;
     height: 64px;
     @media (max-width: 767px) {
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 28px;
     }
 
     .desktop-nav {
@@ -24,7 +25,8 @@
       }
     }
 
-    .mobile-menu-button {
+    .mobile-menu-button,
+    .mobile-selected-page {
       display: block;
       color: #efd2d4;
 
